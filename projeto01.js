@@ -54,3 +54,23 @@ function produtosSemStockLista(inventario) {
 // console.log(produtosSemStockLista(inventario));
 
 
+// 4) 
+
+function valorComIva(inventario) {
+  const taxaIva = 0.23;
+
+  return inventario.map(produto => {
+    return {
+      ...produto,
+      precoComIVA: +(produto.preco * (1 + taxaIva)).toFixed(2)
+    };
+  });
+}
+
+console.log(valorComIva(inventario));
+
+
+// 5) 
+
+
+
