@@ -29,7 +29,3 @@ function produtosEmStock(lista) {
 }
 
 console.log(produtosEmStock(inventario));
-
-
-
-
