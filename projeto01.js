@@ -28,7 +28,7 @@ function produtosEmStock(inventario) {
     
 }
 
-console.log(produtosEmStock(inventario)); 
+// console.log(produtosEmStock(inventario)); 
 
 // 2) 
 
@@ -36,6 +36,21 @@ function produtosEmStockAbaixoDe100(inventario) {
   return inventario.filter(produto => produto.emStock && produto.preco < 100);
 }
 
-console.log(produtosEmStockAbaixoDe100(inventario));
+// console.log(produtosEmStockAbaixoDe100(inventario));
+
+//3) 
+
+function produtoSemStock(inventario) {
+    return inventario.some(produto => !produto.emStock);
+}
+
+// console.log(produtoSemStock(inventario));
+
+function produtosSemStockLista(inventario) {
+    return inventario.filter(produto => !produto.emStock);
+    
+}
+
+// console.log(produtosSemStockLista(inventario));
 
 
