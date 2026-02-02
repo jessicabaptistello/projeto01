@@ -67,10 +67,17 @@ function valorComIva(inventario) {
   });
 }
 
-console.log(valorComIva(inventario));
+// console.log(valorComIva(inventario));
 
 
 // 5) 
 
+function valorTotal(inventario) {
+  return inventario
+    .filter(produto => produto.emStock)
+    .reduce((total, produto) => total + produto.preco, 0);
+}
+
+// console.log(valorTotal(inventario));
 
 
