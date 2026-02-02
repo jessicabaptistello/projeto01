@@ -23,9 +23,17 @@ const inventario = [
 
 // 1)
 
-function produtosEmStock(lista) {
-    return lista.filter(produto => produto.emStock);
+function produtosEmStock(inventario) {
+    return inventario.filter(produto => produto.emStock);
     
 }
 
 console.log(produtosEmStock(inventario));
+
+// 2) 
+
+function produtosEmStockAbaixoDe100(inventario) {
+  return inventario.filter(produto => produto.emStock && produto.preco < 100);
+}
+
+console.log(produtosEmStockAbaixoDe100(inventario));
